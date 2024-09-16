@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Multimedia</title>
+</head>
+<body>
+    <video width="320" controls muted>
+        <source src="Intro to course.mp4" type="video/mp4">
+        <!-- <source src="sound.ogg" type="audio/ogg"> -->
+    </video>
+    <button onclick="video.play();showProperty()">Play audio</button>
+    <button onclick="video.pause();showProperty()">Pause audio</button>
+    <button onclick="video.requestFullscreen();showProperty()">Full Screen</button>
+
+    <script>
+        var video = document.querySelector("video");
+
+        function showProperty() {
+            console.log("Paused?: " + video.paused);
+            console.log("CUrrent time: " + video.currentTime);
+            console.log("Duration: " + video.duration);
+            console.log("Vloume: " + video.volume);
+        }
+    </script>
+</body>
+</html>
